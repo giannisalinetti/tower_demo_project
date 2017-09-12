@@ -1,0 +1,9 @@
+---
+- hosts: all
+  vars:
+    db_pkg: postgresql-server
+  tasks:
+    - name: "Package {{ db_pkg }} is installed"
+      yum:
+        name: "{{ db_pkg }}"
+        state: latest
